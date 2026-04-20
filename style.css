@@ -141,7 +141,7 @@ main {
     padding: 0 3%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Aturan untuk layar dengan lebar maksimum 768px (misalnya, tablet dan ponsel) */
     #topup ul {
         grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
         gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
@@ -196,12 +196,20 @@ main {
     justify-content:center;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-
+    grid-template-columns: repeat(6, 1fr); /* Membuat 6 kolom dengan lebar yang sama */
     margin: 0 auto;
     margin-top: 30px;
     max-width: 1500px; /* Membatasi lebar maksimum grid */
     list-style: none;
+    gap: 20px; /* Jarak antar item grid */
+    padding: 0 3%;
+}
+
+@media (max-width: 768px) { /* Aturan untuk layar dengan lebar maksimum 768px (misalnya, tablet dan ponsel) */
+    #joki ul {
+        grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
+        gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
+    }     
 }
 
 #joki ul li {
@@ -222,6 +230,12 @@ main {
     background-color: #191919; /* Warna latar belakang berubah */
 }
 
+#joki ul li img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
 #joki ul li a {
     text-decoration: none;
     color: #E0E0E0;
@@ -237,7 +251,7 @@ main {
     color: #E0E0E0;
     text-align: center;
     padding: 50px 30px;
-    border-radius: 70px;  
+    border-radius: 70px;
     margin: 0 4%;
     margin-bottom: 50px;
 }
@@ -246,12 +260,20 @@ main {
     justify-content:center;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-
+    grid-template-columns: repeat(6, 1fr); /* Membuat 6 kolom dengan lebar yang sama */
     margin: 0 auto;
     margin-top: 30px;
     max-width: 1500px; /* Membatasi lebar maksimum grid */
     list-style: none;
+    gap: 20px; /* Jarak antar item grid */
+    padding: 0 3%;
+}
+
+@media (max-width: 768px) { /* Aturan untuk layar dengan lebar maksimum 768px (misalnya, tablet dan ponsel) */
+    #voucher ul {
+        grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
+        gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
+    }     
 }
 
 #voucher ul li {
@@ -270,6 +292,12 @@ main {
     box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
     font-weight: bold; /* Membuat teks lebih tebal */
     background-color: #191919; /* Warna latar belakang berubah */
+}
+
+#voucher ul li img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Menjaga rasio aspek gambar */
 }
 
 #voucher ul li a {
