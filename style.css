@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+section {
+    scroll-margin-top: 70px; /* Sesuaikan dengan tinggi navbar */
+}
+/* 262727 */
+body{
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url("/assets/XDback.png");
+    background-color: #262727;
+}
+.navigasi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Memberi jarak antara logo dan menu */
+
+
+    position: sticky; /* Mengunci posisi elemen terhadap viewport/layar */
+    top: 0;
+    width: 100vw; /* Membuat navbar memenuhi lebar layar */
+    left: 0;
+
+    padding: 10px 5%; /* Memberi ruang di dalam navbar */
+    height: auto;    /* Sesuaikan tinggi navbar */
+    background-color: #191919;
+    z-index: 1000;   /* Memastikan navbar berada di atas elemen lain */
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-svg {
+    height: 60px; /* Sesuaikan ukuran logo */
+    width: auto; /* Menjaga rasio aspek logo */
+    display: block;
+}
+.navigasi ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Jarak antar menu */
+    justify-content: center; /* Mengatur agar menu berada di tengah */
+    align-items: center;     /* Mengatur agar menu berada di tengah secara vertikal */
+    height: 100%;           /* Membuat ul mengisi tinggi navbar */
+}
+
+.navigasi ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 16px;
+    padding: 10px 15px; /* Memberi ruang di sekitar teks menu */
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
+
+.navigasi ul li a:hover {
+    background-color: #262727; /* Warna latar belakang saat hover */
+    color: #ff4040; /* Warna teks saat hover */  
+    text-shadow: 0.5px 0 0 #ff4040, -0.5px 0 0 #ff4040; /* Efek bayangan pada teks */
+    border-radius: 10px; /* Membuat sudut membulat saat hover */
+}
+
+main {
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1500px; /* Membatasi lebar maksimum kontainer */
+}
+
+#slider-container {
+    width: 100%; /* Full lebar layar */
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Wrapper Bergerak */
+.slides {
+    display: flex;
+    width: 300%; /* Karena ada 3 slide */
+    height: auto;
+    /* Animasi: Nama 'jalan', durasi 12 detik, berulang selamanya */
+    animation: jalan 12s infinite ease-in-out;
+}
+
+.slide {
+    width: 100%; 
+    height: 100%;
+    margin: 1% 1.5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 80%; /* Membatasi tinggi gambar agar tidak melebihi slide */
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+/* LOGIKA ANIMASI OTOMATIS */
+@keyframes jalan {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }       /* Gambar 1 diam */
+    33% { transform: translateX(-33.33%); } /* Transisi ke Gambar 2 */
+    58% { transform: translateX(-33.33%); } /* Gambar 2 diam */
+    66% { transform: translateX(-66.66%); } /* Transisi ke Gambar 3 */
+    91% { transform: translateX(-66.66%); } /* Gambar 3 diam */
+    100% { transform: translateX(0); }      /* Balik ke awal */
+}
+
+#topup {
+    background-color: #1f1f1f;
+    color: #E0E0E0;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 70px;
+    margin: 0 4%;
+    margin-bottom: 50px;
+}
+
+#topup ul {
+    justify-content:center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 1500px; /* Membatasi lebar maksimum grid */
+    list-style: none;
+}
+
+#topup ul li {
+    transition: all 0.3s ease; /* Membuat gerakan halus */
+    overflow: hidden;
+    color: #E0E0E0;
+    padding: 5px 5px;
+    border : 2px solid transparent;
+    align-items: center;
+}
+
+#topup ul li:hover {
+    border-radius: 30px; /* Membuat sudut membulat */
+    transform: scale(1.2); /* Tulisan sedikit membesar */
+    border-color: white; /* Garis pinggir muncul */
+    box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    background-color: #191919; /* Warna latar belakang berubah */
+}
+
+#topup ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 15px;
+}
+
+#topup ul li a:hover {
+    color: #ff4040; /* Warna teks berubah saat hover */
+}
+
+#joki {
+    background-color: #1f1f1f;
+    color: #E0E0E0;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 70px;
+    margin: 0 4%;
+    margin-bottom: 50px;
+}
+
+#joki ul {
+    justify-content:center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 1500px; /* Membatasi lebar maksimum grid */
+    list-style: none;
+}
+
+#joki ul li {
+    transition: all 0.3s ease; /* Membuat gerakan halus */
+    overflow: hidden;
+    color: #E0E0E0;
+    padding: 5px 5px;
+    border : 2px solid transparent;
+    align-items: center;
+}
+
+#joki ul li:hover {
+    border-radius: 30px; /* Membuat sudut membulat */
+    transform: scale(1.2); /* Tulisan sedikit membesar */
+    border-color: white; /* Garis pinggir muncul */
+    box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    background-color: #191919; /* Warna latar belakang berubah */
+}
+
+#joki ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 15px;
+}
+
+#joki ul li a:hover {
+    color: #ff4040; /* Warna teks berubah saat hover */
+}
+
+#voucher {
+    background-color: #1f1f1f;
+    color: #E0E0E0;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 70px;  
+    margin: 0 4%;
+    margin-bottom: 50px;
+}
+
+#voucher ul {
+    justify-content:center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 1500px; /* Membatasi lebar maksimum grid */
+    list-style: none;
+}
+
+#voucher ul li {
+    transition: all 0.3s ease; /* Membuat gerakan halus */
+    overflow: hidden;
+    color: #E0E0E0;
+    padding: 5px 5px;
+    border : 2px solid transparent;
+    align-items: center;
+}
+
+#voucher ul li:hover {
+    border-radius: 30px; /* Membuat sudut membulat */
+    transform: scale(1.2); /* Tulisan sedikit membesar */
+    border-color: white; /* Garis pinggir muncul */
+    box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    background-color: #191919; /* Warna latar belakang berubah */
+}
+
+#voucher ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 15px;
+}
+
+#voucher ul li a:hover {
+    color: #ff4040; /* Warna teks berubah saat hover */
+}
+
+.WA-float {
+    position: fixed;
+    width: 80px;
+    height: auto;
+    bottom: 50px;
+    right: 70px;
+    z-index: 1000; /* Pastikan tombol berada di atas elemen lain */
+}
+
+.WA-float :hover {
+    transform: scale(1.5); /* Membuat tombol sedikit membesar saat hover */
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.footer {
+    background-image: url("/assets/Vector 2.svg");
+    height: 650px;
+    color: white;
+    text-align: center;
+    padding: 7px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Memaksa konten di dalamnya ke dasar */
+}
