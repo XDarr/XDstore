@@ -23,7 +23,7 @@ body{
     left: 0;
 
     padding: 10px 5%; /* Memberi ruang di dalam navbar */
-    height: auto;    /* Sesuaikan tinggi navbar */
+    height: 80px;    /* Sesuaikan tinggi navbar */
     background-color: #191919;
     z-index: 1000;   /* Memastikan navbar berada di atas elemen lain */
     
@@ -320,13 +320,30 @@ main {
 }
 
 @media (max-width: 768px) { /* Aturan untuk layar dengan lebar maksimum 768px (misalnya, tablet dan ponsel) */
+    
+    .navigasi {
+        height: 60px; /* Kurangi tinggi navbar pada layar kecil */
+    }
+
+    .logo-svg {
+        height: 35px; /* Kurangi ukuran logo pada layar kecil */
+        padding: 0; /* Hapus padding pada logo untuk menghemat ruang */
+    }
+
     .navigasi ul {
+        text-align: center;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px; /* Kurangi jarak antar item menu pada layar kecil */
     }
+
     .navigasi ul li a {
-        font-size: 14px; /* Kurangi ukuran font pada layar kecil */
+        font-size: 10px; /* Kurangi ukuran font pada layar kecil */
         padding: 8px 10px; /* Kurangi padding pada layar kecil */
+
+    }
+
+    #topup {
+        border-radius: 30px; /* Kurangi radius pada layar kecil */
     }
     #topup ul {
         grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
