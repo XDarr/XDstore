@@ -32,7 +32,7 @@ body{
 .nav-container {
     display: flex;
     width: 100%;
-    max-width: 1500px; /* Membatasi lebar maksimum navbar */
+    max-width: 1380px; /* Membatasi lebar maksimum navbar */
     margin: 0 auto; /* Memusatkan navbar */
     align-items: center;
     justify-content: space-between; /* Memberi jarak antara logo dan menu */
@@ -156,18 +156,24 @@ main {
 }
 
 #topup ul li:hover {
-    border-radius: 30px; /* Membuat sudut membulat */
+    border-radius: 14%;
     transform: scale(1.2); /* Tulisan sedikit membesar */
-    border-color: white; /* Garis pinggir muncul */
     box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
     font-weight: bold; /* Membuat teks lebih tebal */
     background-color: #191919; /* Warna latar belakang berubah */
 }
 
-#topup ul li img {
+#topup ul li a img {
     width: 100%;
+    border: 2px solid transparent;
+    padding: 2px;
     height: auto;
     object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+#topup ul li a img:hover {
+    border-radius: 17%;
+    border-color: white; /* Garis pinggir muncul */
 }
 
 #topup ul li a {
@@ -213,18 +219,24 @@ main {
 }
 
 #joki ul li:hover {
-    border-radius: 30px; /* Membuat sudut membulat */
+    border-radius: 14%;
     transform: scale(1.2); /* Tulisan sedikit membesar */
-    border-color: white; /* Garis pinggir muncul */
     box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
     font-weight: bold; /* Membuat teks lebih tebal */
     background-color: #191919; /* Warna latar belakang berubah */
 }
 
-#joki ul li img {
+#joki ul li a img {
     width: 100%;
+    border: 2px solid transparent;
+    padding: 2px;
     height: auto;
     object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+#joki ul li a img:hover {
+    border-radius: 17%;
+    border-color: white; /* Garis pinggir muncul */
 }
 
 #joki ul li a {
@@ -270,18 +282,24 @@ main {
 }
 
 #voucher ul li:hover {
-    border-radius: 30px; /* Membuat sudut membulat */
+    border-radius: 14%;
     transform: scale(1.2); /* Tulisan sedikit membesar */
-    border-color: white; /* Garis pinggir muncul */
     box-shadow: #191919 0px 0px 10px; /* Efek bayangan */
     font-weight: bold; /* Membuat teks lebih tebal */
     background-color: #191919; /* Warna latar belakang berubah */
 }
 
-#voucher ul li img {
+#voucher ul li a img {
     width: 100%;
+    border: 2px solid transparent;
+    padding: 2px;
     height: auto;
     object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+#voucher ul li a img:hover {
+    border-radius: 17%;
+    border-color: white; /* Garis pinggir muncul */
 }
 
 #voucher ul li a {
@@ -292,6 +310,36 @@ main {
 
 #voucher ul li a:hover {
     color: #ff4040; /* Warna teks berubah saat hover */
+}
+
+#saran {
+    color: #E0E0E0;
+    font-size: 20px;
+    background-color: #1f1f1f;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0 4%;   
+    height: 500px;
+    max-width: 1500px;
+    padding: 30px 40px ;
+    gap: 3%;
+}
+
+#saran textarea {
+    padding: 10px;
+    font-size: 15px;
+    height: 90%;
+    width: 100%;
+}
+
+#saran input {
+    font-size: 20px;
+    height: 45px;
+    width: 90px;
+    color: #E0E0E0;
+    background-color: #262727;
 }
 
 .WA-float {
@@ -320,7 +368,9 @@ main {
 }
 
 @media (max-width: 768px) { /* Aturan untuk layar dengan lebar maksimum 768px (misalnya, tablet dan ponsel) */
-    
+    * {
+        font-size: 7px; /* Kurangi ukuran font secara keseluruhan pada layar kecil */
+    }
     .navigasi {
         height: 60px; /* Kurangi tinggi navbar pada layar kecil */
     }
@@ -345,16 +395,28 @@ main {
     #topup {
         border-radius: 30px; /* Kurangi radius pada layar kecil */
     }
+
     #topup ul {
         grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
         gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
     }
+
+    #joki {
+        border-radius: 30px;
+    }
+
     #joki ul {
         grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
         gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
     }
+
+    #voucher {
+        border-radius: 30px;
+    }
+
     #voucher ul {
         grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 3 kolom pada layar kecil */
         gap: 10px; /* Kurangi jarak antar item grid pada layar kecil */
-    }   
+    }  
+
 }
